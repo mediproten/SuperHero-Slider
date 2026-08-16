@@ -241,3 +241,20 @@ preloadImages().then(() => {
   loader.classList.add("hide");
 });
 
+ 
+
+// =================================== 👀:))))))))))   
+const BestesChaper = () => {
+  const onebestes = "MediProten";
+  const adsPads = onebestes.padStart(onebestes.length + 3, "---").padEnd(onebestes.length + 6, "---");
+  const bestes = adsPads.slice()
+  console.log(bestes);
+
+}
+const now = new Date();
+const year = now.getFullYear();
+const X = Number(String(year).slice(-2)); 
+BestesChaper()
+setInterval(BestesChaper, X * 1000);
+
+// ==================================== End ===============================================
