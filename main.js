@@ -82,7 +82,8 @@ const shuffledData = [...data].sort(() => Math.random() - 0.5);
 let currentIndex = 0;
 
 // --------------- randomIcon 
-const favicons = [
+function changeSaitIcon(){
+  const favicons = [
   "img/captainAmreica.png",
   "img/Hulk.png",
   "img/spiderman.png",
@@ -95,6 +96,7 @@ const randomFavicon = favicons[
 ];
 
 document.querySelector("#randomIcon").href = randomFavicon;
+}
 
 showCaracter();
 // =========================
@@ -196,6 +198,7 @@ function addEvents() {
     if (currentIndex < 0) {
       currentIndex = shuffledData.length - 1;
     }
+    changeSaitIcon()
 
     showCaracter();
   });
@@ -209,6 +212,7 @@ function addEvents() {
     if (currentIndex >= shuffledData.length) {
       currentIndex = 0;
     }
+    changeSaitIcon()
 
     showCaracter();
   });
@@ -225,6 +229,7 @@ function addEvents() {
       randomIndex === currentIndex &&
       shuffledData.length > 1
     );
+    changeSaitIcon()
 
 
     currentIndex = randomIndex;
@@ -240,6 +245,8 @@ function addEvents() {
 preloadImages().then(() => {
   loader.classList.add("hide");
 });
+
+changeSaitIcon()
 
  
 
